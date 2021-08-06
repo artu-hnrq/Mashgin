@@ -1,0 +1,15 @@
+site_name: !ENV PROJECT_NAME
+site_description:
+
+site_url: !ENV DOCS_URL
+repo_url: !ENV REPO_URL
+
+docs_dir: pages
+site_dir: _docs
+use_directory_urls: false
+
+theme: readthedocs
+
+nav:
+  - Home: 'README.md'
+  - License: 'LICENSE.txt'
