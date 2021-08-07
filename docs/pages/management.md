@@ -21,6 +21,15 @@ Run `make <target>` from your preferred shell to execute the referenced *target*
 | clean            | Delete all generated files |
 | veryclean        | Uninstall execution environment completely |
 
+### Backend services
+| Target | description |
+| --- | --- |
+| run              | Run backend services |
+| prepare          | Prepare database to execution |
+| compile          | Process source code into an executable program |
+| test             | Test application |
+| reset_migrations | Delete all Django apps' migrations |
+
 ### Documentation
 | Target | description |
 | --- | --- |

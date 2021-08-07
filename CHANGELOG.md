@@ -9,3 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initialize repository
 - Structure documentation writing starting-point
 - Write out project presentation and instructions
+
+### Feat
+- Structure backend services development starting-point

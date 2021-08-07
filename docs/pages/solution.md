@@ -15,6 +15,8 @@
 [>4]: https://github.com "Github"
 [>5]: https://en.wikipedia.org/wiki/Markdown "Markdown"
 [>6]: https://www.mkdocs.org/ "Mkdocs"
+[>7]: https://www.python.org/ "Python"
+[>8]: https://www.djangoproject.com/ "Django"
 
 
 ## Convention compliance
@@ -42,6 +44,10 @@ The next technologies were used during project conception, development, test or 
 * [PyCharm][>3] as integrated development environment
 * [Github][>4] for code integration management
 
+### Backend services stack
+* [Python][>7] as programming language
+* [Django][>8] as web service application
+
 ### Documentation aparatus
 * [Markdown][>5] for text formatting
 * [Mkdocs][>6] as static site generator
@@ -60,8 +66,14 @@ Here some descriptions about this project:
 ├── Makefile                    Development management facilities
 ├── README.md                   Repo readme document
 
+└── api/
+    ├── __project__/            Django project root folder
+    ├── manage.py               Django's command-line utility
+    └── requirements.txt        Python dependency descriptor
+
 └── data/
     └── img/                    Project level images
+    └── run/                    PyCharm run configuration
 
 └── docs/                       Documentation root folder
     ├── mkdocs.yml              MkDocs configuration file  
