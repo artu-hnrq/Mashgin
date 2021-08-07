@@ -8,3 +8,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Docs
 - Initialize repository
 - Structure documentation writing starting-point
+- Write out project presentation and instructions

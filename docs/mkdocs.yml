@@ -1,8 +1,8 @@
-site_name: !ENV PROJECT_NAME
-site_description:
+site_name: Mishmash Kitchen
+site_description: A feast for the hungriest in you
 
-site_url: !ENV DOCS_URL
-repo_url: !ENV REPO_URL
+repo_url: https://github.com/artu-hnrq/mishmash_kitchen
+site_url: https://artu-hnrq.github.io/mishmash_kitchen
 
 docs_dir: pages
 site_dir: _docs
@@ -11,5 +11,13 @@ use_directory_urls: false
 theme: readthedocs
 
 nav:
-  - Home: 'README.md'
-  - License: 'LICENSE.txt'
+  - General:
+    - Home: 'index.md'
+    - Challenge: 'challenge.pdf'
+  - Project:
+    - Project setup: 'setup.md'
+    - Development management: 'management.md'
+    - Solution: 'solution.md'
+  - Resources:
+      Source code: 'https://github.com/artu-hnrq/Mishmash_Kitchen'
+      License: 'https://choosealicense.com/licenses/gpl-3.0/'
