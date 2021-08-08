@@ -17,6 +17,7 @@ nav:
   - Project:
     - Project setup: 'setup.md'
     - Development management: 'management.md'
+    - Configuration: 'configuration.md'
     - Solution: 'solution.md'
   - Resources:
       Source code: 'https://github.com/artu-hnrq/Mishmash_Kitchen'

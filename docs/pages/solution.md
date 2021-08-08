@@ -17,6 +17,12 @@
 [>6]: https://www.mkdocs.org/ "Mkdocs"
 [>7]: https://www.python.org/ "Python"
 [>8]: https://www.djangoproject.com/ "Django"
+[>9]: https://www.django-rest-framework.org/ "Django REST Framework"
+[>10]: https://github.com/henriquebastos/python-decouple "Python Decouple"
+[>11]: https://github.com/painless-software/django-probes "Django Probes"
+[>12]: https://gunicorn.org/ "Gunicorn"
+[>13]: https://www.postgresql.org/ "PostgreSQL"
+[>14]: https://www.sqlite.org/ "SQLite"
 
 
 ## Convention compliance
@@ -47,6 +53,16 @@ The next technologies were used during project conception, development, test or 
 ### Backend services stack
 * [Python][>7] as programming language
 * [Django][>8] as web service application
+    * [Django REST Framework][>9] for API architecture
+    * [Python Decouple][>10] for environment variables consumption
+    * [Django Probes][>11] for database connection waiting
+
+### Deployment architecture
+* [Gunicorn][>12] as web server gateway interface
+
+### Persistence engines
+* [PostrgreSQL][>13] as object-relational database system
+* [SQLite][>14] as alternative lightweight SQL database
 
 ### Documentation aparatus
 * [Markdown][>5] for text formatting
@@ -69,7 +85,8 @@ Here some descriptions about this project:
 └── api/
     ├── __project__/            Django project root folder
     ├── manage.py               Django's command-line utility
-    └── requirements.txt        Python dependency descriptor
+    ├── requirements.txt        Python dependency descriptor
+    └── fixtures/               Preset initial data
 
 └── data/
     └── img/                    Project level images
@@ -79,6 +96,7 @@ Here some descriptions about this project:
     ├── mkdocs.yml              MkDocs configuration file  
     └── pages/                  
         ├── challenge.pdf       Original challenge description
+        ├── configuration.md    Application execution configuration
         ├── index.md            Documentation home page
         ├── management.md       Development management summary
         ├── setup.md            Application setup instructions

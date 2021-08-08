@@ -14,16 +14,24 @@ endif
 
 
 init:: veryclean $(API_ROOT)/requirements.txt
-	[[ -n "$(VENV_ROOT)" ]] && [[ ! -d "$(VENV_ROOT)" ]] && python3 -m venv $(VENV_ROOT)
+	[[ -n "$(VENV_ROOT)" ]] && [[ ! -d "$(VENV_ROOT)" ]] \
+ 		&& python3 -m venv $(VENV_ROOT)
 	$(PYTHON) -m pip install --upgrade pip
 	$(PYTHON) -m pip install -r $(API_ROOT)/requirements.txt
 	$(PYTHON) -m pip freeze
 
 run:: compile prepare ## Run backend services
-	$(DJANGO_ADMIN) runserver 0:8000
+	[[ "$(ENVIRONMENT)" == "PRODUCTION" ]] \
+		&& $(PYTHON) -m gunicorn __project__.wsgi --chdir $(API_ROOT) --bind 0:8000 \
+		|| $(DJANGO_ADMIN) runserver 0:8000
 
 prepare:: ## Prepare database to execution
+	[[ "$(ENVIRONMENT)" == "PRODUCTION" ]] \
+		&& $(DJANGO_ADMIN) wait_for_database
 	$(DJANGO_ADMIN) migrate
+	if [[ -n "$(LOADDATA)" ]]; then \
+		$(DJANGO_ADMIN) loaddata $(LOADDATA); \
+	fi
 
 compile:: ## Process source code into an executable program
 	$(DJANGO_ADMIN) collectstatic --no-input

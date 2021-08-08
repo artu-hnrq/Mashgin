@@ -12,3 +12,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Feat
 - Structure backend services development starting-point
+- Improve application settings and configure REST API
