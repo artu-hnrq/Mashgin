@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://artu-hnrq.github.io/mishmash_kitchen/configuration.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Configuration - Mishmash Kitchen</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Configuration";
+    var mkdocs_page_input_path = "configuration.md";
+    var mkdocs_page_url = "/mishmash_kitchen/configuration.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Mishmash Kitchen</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">General</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="challenge.pdf">Challenge</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Project</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="setup.html">Project setup</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="management.html">Development management</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="solution.html">Solution</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/artu-hnrq/Mishmash_Kitchen">Source code</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://choosealicense.com/licenses/gpl-3.0/">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Mishmash Kitchen</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/artu-hnrq/mishmash_kitchen/edit/master/docs/configuration.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="configuration">Configuration</h1>
+<p>Project execution can be configured through environment variables. 
+Below each expected variable is described.</p>
+<h2 id="general">General</h2>
+<h4 id="environment">ENVIRONMENT</h4>
+<p>It defines instance's <em>running mode</em>, impacting in default value supplied for other configurations,
+as well as in expected environment variables. See more details in each configuration description.</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>'DEVELOPMENT'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="database">Database</h2>
+<p>When <strong>ENVIRONMENT</strong> is set to <code>'PRODUCTION'</code>, application expects the following configurations. 
+Otherwise, it uses a not-configurable <code>sqlite3</code> database.</p>
+<h4 id="db_engine">DB_ENGINE</h4>
+<p>Defines Django's database <code>ENGINE</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>'django.db.backends.postgresql_psycopg2'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="db_name">DB_NAME</h4>
+<p>Defines Django's database <code>NAME</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="db_username">DB_USERNAME</h4>
+<p>Defines Django's database <code>USER</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="db_password">DB_PASSWORD</h4>
+<p>Defines Django's database <code>PASSWORD</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="db_host">DB_HOST</h3>
+<p>Defines Django's database <code>HOST</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="db_port">DB_PORT</h4>
+<p>Defines Django's database <code>PORT</code> setting</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="django-settings">Django settings</h2>
+<p>The following configuration variables are direct forwarded to same-name Django settings.
+And their effect over launched service can be found in <a href="https://docs.djangoproject.com/en/3.1/topics/settings/">proper documentation</a>.</p>
+<h4 id="allowed_hosts">ALLOWED_HOSTS</h4>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>space-separated list</td>
+<td><code>'*'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="debug">DEBUG</h4>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td><code>ENVIRONMENT != 'PRODUCTION'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="secret_key">SECRET_KEY</h4>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>Dynamically generated through <code>django.core.management.utils.get_random_secret_key</code> function</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="development-management">Development management</h2>
+<p>Environment variables are also used by Make in order to provide flexibility
+to its provisioned <a href="management.html">development management</a> facilities.
+Some of them are described above.</p>
+<h4 id="project_name">PROJECT_NAME</h4>
+<p>Used to compose <code>make</code> outputs</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>Dynamically retrieved by project root directory name</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="python">PYTHON</h4>
+<p>Define where to find the <code>python3</code> binary to be used in Make targets.
+If supplied value not refer to the full path of an executable script,
+a python virtual environment will be created inside the current working directory.</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>$(VENV_ROOT)/bin/python3</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="venv">VENV</h4>
+<p>Define if python virtual environment should be used and its folder name</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td><code>'venv'</code></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/artu-hnrq/mishmash_kitchen/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

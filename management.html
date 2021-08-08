@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://artu-hnrq.github.io/mishmash_kitchen/index.html">
+  <link rel="canonical" href="https://artu-hnrq.github.io/mishmash_kitchen/management.html">
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Home - Mishmash Kitchen</title>
+  <title>Development management - Mishmash Kitchen</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/mishmash_kitchen/index.html";
+    var mkdocs_page_name = "Development management";
+    var mkdocs_page_input_path = "management.md";
+    var mkdocs_page_url = "/mishmash_kitchen/management.html";
   </script>
   
   <script src="js/jquery-2.1.1.min.js" defer></script>
@@ -47,25 +47,25 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <p class="caption"><span class="caption-text">General</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#maintenance">Maintenance</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="challenge.pdf">Challenge</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Project</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="setup.html">Project setup</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="management.html">Development management</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="management.html">Development management</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general">General</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#backend-services">Backend services</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="solution.html">Solution</a>
                     </li>
@@ -98,14 +98,14 @@
     
       
         
-          <li>General &raquo;</li>
+          <li>Project &raquo;</li>
         
       
     
-    <li>Home</li>
+    <li>Development management</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/artu-hnrq/mishmash_kitchen/edit/master/docs/index.md"
+        <a href="https://github.com/artu-hnrq/mishmash_kitchen/edit/master/docs/management.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -117,20 +117,97 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mashgin-code-challenge"><a href="https://www.mashgin.com/" title="Mashgin website">Mashgin</a> - Code Challenge <img alt="Views" src="https://views.whatilearened.today/views/github/artu-hnrq/mishmash_kitchen.svg?cache=remove" title="Repo views" /></h1>
-<p>This project is <a href="https://github.com/artu-hnrq" title="Author's Github">artu-hnrq</a>'s code challenge result for a
-<strong>Senior Software Engineer - Full-Stack</strong> position in <a href="https://www.mashgin.com/" title="Mashgin website">Mashgin</a>.</p>
-<h2 id="overview">Overview</h2>
-<p>The proposal is to model and develop a restaurant ordering system composed by a frontend client application
-and a backend API service, allowing users to select available items from a menu and process their order payment.</p>
-<p>You can refer to the <a href="challenge.pdf" title="Challenge description">full challenge description</a> for more details.
-you also maybe want to check the whole implementation description in <a href="solution.html" title="Detailed solution">detailed solution</a>.
-Or yet examine the <a href="https://github.com/artu-hnrq/mishmash_kitchen" title="Project repo">source code</a> thoroughly.</p>
-<h2 id="maintenance">Maintenance <a href="https://www.repostatus.org" title="Repo maintenance status"><img alt="" src="https://www.repostatus.org/badges/latest/concept.svg" title="Repostatus badge" /></a></h2>
-<p>This project is maintained by the author, <a href="https://github.com/artu-hnrq">@artu-hnrq</a>. <br>
-It is a <strong>proof-of-concept</strong> and only intend to be a limited example.</p>
-<h2 id="license">License <a href="https://choosealicense.com/licenses/gpl-3.0/" title="GPL 3.0 License description"><img alt="" src="https://img.shields.io/github/license/artu-hnrq/mishmash_kitchen?color=green" title="License badge" /></a></h2>
-<p>This project is published under the permissions established by <a href="https://choosealicense.com/licenses/gpl-3.0/" title="GPL 3.0 License description">GNU General Public License v3.0</a>.</p>
+                <h2 id="development-management">Development management</h2>
+<blockquote>
+<p>During application development some tasks are repeatedly executed,
+and most time they consist in run multiple commands in shell. </p>
+<p><a href="https://www.gnu.org/software/make/" title="GNU Make">GNU Make</a> is a command line tool that can help one into <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself" title="Don't repeat yourself">DRY</a>,
+organize execution management actions and make them flexible and shareable.</p>
+</blockquote>
+<p>The following Make <em>targets</em> have been implemented
+to facilitate the application development and execution processes management.</p>
+<p>Run <code>make &lt;target&gt;</code> from your preferred shell to execute the referenced <em>target</em> task.</p>
+<h3 id="general">General</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>help</td>
+<td>Show all available targets and their brief description</td>
+</tr>
+<tr>
+<td>init</td>
+<td>Configure execution environment</td>
+</tr>
+<tr>
+<td>clean</td>
+<td>Delete all generated files</td>
+</tr>
+<tr>
+<td>veryclean</td>
+<td>Uninstall execution environment completely</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend-services">Backend services</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>run</td>
+<td>Run backend services</td>
+</tr>
+<tr>
+<td>prepare</td>
+<td>Prepare database to execution</td>
+</tr>
+<tr>
+<td>compile</td>
+<td>Process source code into an executable program</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Test application</td>
+</tr>
+<tr>
+<td>reset_migrations</td>
+<td>Delete all Django apps' migrations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentation">Documentation</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docs</td>
+<td>Build documentation</td>
+</tr>
+<tr>
+<td>read</td>
+<td>Serve documentation</td>
+</tr>
+<tr>
+<td>publish</td>
+<td>Publish documentation into Github Pages</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -138,8 +215,10 @@ It is a <strong>proof-of-concept</strong> and only intend to be a limited exampl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="challenge.pdf" class="btn btn-neutral float-right" title="Challenge">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="solution.html" class="btn btn-neutral float-right" title="Solution">Next <span class="icon icon-circle-arrow-right"></span></a>
       
+      
+        <a href="setup.html" class="btn btn-neutral" title="Project setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -169,8 +248,10 @@ It is a <strong>proof-of-concept</strong> and only intend to be a limited exampl
         </span>
     
     
+      <span><a href="setup.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-      <span><a href="challenge.pdf" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+      <span><a href="solution.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2021-08-03</lastmod>
+         <loc>https://artu-hnrq.github.io/mishmash_kitchen/index.html</loc>
+         <lastmod>2021-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://artu-hnrq.github.io/mishmash_kitchen/configuration.html</loc>
+         <lastmod>2021-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://artu-hnrq.github.io/mishmash_kitchen/management.html</loc>
+         <lastmod>2021-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://artu-hnrq.github.io/mishmash_kitchen/setup.html</loc>
+         <lastmod>2021-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://artu-hnrq.github.io/mishmash_kitchen/solution.html</loc>
+         <lastmod>2021-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
