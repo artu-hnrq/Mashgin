@@ -84,12 +84,15 @@ Here some descriptions about this project:
 
 └── api/
     ├── __project__/            Django project root folder
+    ├── core/                   Main Django app
     ├── manage.py               Django's command-line utility
     ├── requirements.txt        Python dependency descriptor
     └── fixtures/               Preset initial data
 
 └── data/
-    └── img/                    Project level images
+    ├── img/                    Project level images
+    ├── media/                  Project media
+    ├── postman/                Postman workspace configuration
     └── run/                    PyCharm run configuration
 
 └── docs/                       Documentation root folder

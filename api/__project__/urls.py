@@ -5,11 +5,10 @@ https://docs.djangoproject.com/en/dev/topics/http/urls/
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
-from django.views.debug import default_urlconf
+from django.urls import path, include
 
 urlpatterns = [
-    path('', default_urlconf),
+    path('', include('core.urls')),
     path('admin/', admin.site.urls),
 ]
 
