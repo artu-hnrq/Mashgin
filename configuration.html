@@ -93,6 +93,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#secret_key">SECRET_KEY</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loaddata">LOADDATA</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#development-management">Development management</a>
@@ -115,6 +117,8 @@
                     <li class="toctree-l1"><a class="" href="https://github.com/artu-hnrq/Mishmash_Kitchen">Source code</a>
                     </li>
                     <li class="toctree-l1"><a class="" href="https://choosealicense.com/licenses/gpl-3.0/">License</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://app.getpostman.com/join-team?invite_code=bf91c969246261a2b3d423cb0390d112&ws=50e0f2a1-eb23-467c-bcd7-78f231f9d783">Postman workspace</a>
                     </li>
                 </ul>
       </div>
@@ -285,7 +289,7 @@ Otherwise, it uses a not-configurable <code>sqlite3</code> database.</p>
 </table>
 <hr />
 <h2 id="django-settings">Django settings</h2>
-<p>The following configuration variables are direct forwarded to same-name Django settings.
+<p>Beside some, most of the following configuration variables are direct forwarded to same-name Django settings.
 And their effect over launched service can be found in <a href="https://docs.djangoproject.com/en/3.1/topics/settings/">proper documentation</a>.</p>
 <h4 id="allowed_hosts">ALLOWED_HOSTS</h4>
 <table>
@@ -331,6 +335,23 @@ And their effect over launched service can be found in <a href="https://docs.dja
 <tr>
 <td><code>string</code></td>
 <td>Dynamically generated through <code>django.core.management.utils.get_random_secret_key</code> function</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="loaddata">LOADDATA</h4>
+<p>Define fixture files to be loaded after application boots up</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>space-separated list</td>
+<td><code>''</code></td>
 </tr>
 </tbody>
 </table>

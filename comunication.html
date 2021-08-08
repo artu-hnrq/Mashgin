@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://artu-hnrq.github.io/mishmash_kitchen/index.html">
+  <link rel="canonical" href="https://artu-hnrq.github.io/mishmash_kitchen/comunication.html">
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Home - Mishmash Kitchen</title>
+  <title>Comunication layer - Mishmash Kitchen</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/mishmash_kitchen/index.html";
+    var mkdocs_page_name = "Comunication layer";
+    var mkdocs_page_input_path = "comunication.md";
+    var mkdocs_page_url = "/mishmash_kitchen/comunication.html";
   </script>
   
   <script src="js/jquery-2.1.1.min.js" defer></script>
@@ -47,16 +47,8 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <p class="caption"><span class="caption-text">General</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#maintenance">Maintenance</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="challenge.pdf">Challenge</a>
                     </li>
@@ -101,15 +93,11 @@
     <li><a href=".">Docs</a> &raquo;</li>
     
       
-        
-          <li>General &raquo;</li>
-        
-      
     
-    <li>Home</li>
+    <li>Comunication layer</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/artu-hnrq/mishmash_kitchen/edit/master/docs/index.md"
+        <a href="https://github.com/artu-hnrq/mishmash_kitchen/edit/master/docs/comunication.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -121,31 +109,45 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mashgin-code-challenge"><a href="https://www.mashgin.com/" title="Mashgin website">Mashgin</a> - Code Challenge <img alt="Views" src="https://views.whatilearened.today/views/github/artu-hnrq/mishmash_kitchen.svg?cache=remove" title="Repo views" /></h1>
-<p>This project is <a href="https://github.com/artu-hnrq" title="Author's Github">artu-hnrq</a>'s code challenge result for a
-<strong>Senior Software Engineer - Full-Stack</strong> position in <a href="https://www.mashgin.com/" title="Mashgin website">Mashgin</a>.</p>
-<h2 id="overview">Overview</h2>
-<p>The proposal is to model and develop a restaurant ordering system composed by a frontend client application
-and a backend API service, allowing users to select available items from a menu and process their order payment.</p>
-<p>You can refer to the <a href="challenge.pdf" title="Challenge description">full challenge description</a> for more details.
-you also maybe want to check the whole implementation description in <a href="solution.html" title="Detailed solution">detailed solution</a>.
-Or yet examine the <a href="https://github.com/artu-hnrq/mishmash_kitchen" title="Project repo">source code</a> thoroughly.</p>
-<h2 id="maintenance">Maintenance <a href="https://www.repostatus.org" title="Repo maintenance status"><img alt="" src="https://www.repostatus.org/badges/latest/concept.svg" title="Repostatus badge" /></a></h2>
-<p>This project is maintained by the author, <a href="https://github.com/artu-hnrq">@artu-hnrq</a>. <br>
-It is a <strong>proof-of-concept</strong> and only intend to be a limited example.</p>
-<h2 id="license">License <a href="https://choosealicense.com/licenses/gpl-3.0/" title="GPL 3.0 License description"><img alt="" src="https://img.shields.io/github/license/artu-hnrq/mishmash_kitchen?color=green" title="License badge" /></a></h2>
-<p>This project is published under the permissions established by <a href="https://choosealicense.com/licenses/gpl-3.0/" title="GPL 3.0 License description">GNU General Public License v3.0</a>.</p>
+                <h1 id="comunication-layer">Comunication layer</h1>
+<p>The data transfer between the front end application and backend services
+is made through an <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" title="Representational state transfer">REST</a> API. </p>
+<h2 id="endpoints">Endpoints</h2>
+<p>The developed API exposes endpoints, under <code>/</code> path, in line with the following specification:</p>
+<h3 id="menu">menu/</h3>
+<p>Request the list of dishes offered by the restaurant</p>
+<table>
+<thead>
+<tr>
+<th>Allowed HTTP methods</th>
+<th>Required inputs</th>
+<th>Optional inputs</th>
+<th>Authentication required</th>
+<th>Permission required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="api-clients">API clients</h2>
+<p>There are several ways to interact with the API.
+<strong>Django REST Framework</strong> itself will render a GUI if you access some endpoint via browser.
+There you'll be able to check more information over that endpoint and even trigger requests.</p>
+<p>You also can use <a href="https://app.getpostman.com/join-team?invite_code=bf91c969246261a2b3d423cb0390d112&amp;ws=50e0f2a1-eb23-467c-bcd7-78f231f9d783" title="Postman workspace">Postman</a> HTTP client to do so.
+Inside [repository][-2]'s <code>data</code> folder you'll find its workspace-configuration directory, 
+which can be imported to set up the context used during development.</p>
+<p>Or you can also ingress into [project's Postman configured workspace][&gt;3].</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="challenge.pdf" class="btn btn-neutral float-right" title="Challenge">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-    </div>
   
 
   <hr/>
@@ -173,8 +175,6 @@ It is a <strong>proof-of-concept</strong> and only intend to be a limited exampl
         </span>
     
     
-    
-      <span><a href="challenge.pdf" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
