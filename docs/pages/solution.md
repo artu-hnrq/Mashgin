@@ -89,6 +89,15 @@ Here some descriptions about this project:
     ├── requirements.txt        Python dependency descriptor
     └── fixtures/               Preset initial data
 
+└── app/
+    ├── package.json            Node package descriptor
+    ├── public/                 Webpack tracked files
+    └── src/
+        ├── index.css           Application main stylesheet 
+        ├── index.js            Application entrypoint
+        └── Components/         React components root folder
+            └── App.js          
+
 └── data/
     ├── img/                    Project level images
     ├── media/                  Project media

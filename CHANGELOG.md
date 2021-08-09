@@ -14,3 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structure backend services development starting-point
 - Improve application settings and configure REST API
 - Implement menu API endpoint
+- Structure frontend application development starting-point
